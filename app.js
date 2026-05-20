@@ -118,6 +118,10 @@ app.use((req, res, next) => {
  res.status(statusCode).render("error.ejs",{message});
 });
 
+app.get("/", (req, res) => {
+    res.send("StayFinder is working!");
+});
+
 app.listen(8080,()=>{
   console.log("app is listening");
 });
